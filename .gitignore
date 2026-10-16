@@ -1,0 +1,42 @@
+# Python caches and packaging artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Compiled C++ / CUDA extensions and libraries
+*.so
+*.o
+*.a
+*.dll
+*.dylib
+
+# ROS / catkin workspace artifacts
+devel/
+install/
+logs/
+.catkin_tools/
+.catkin_workspace
+*.bag
+*.bag.active
+
+# Generated datasets
+/dataset*
+
+# Training checkpoints, TensorBoard logs, and exported models
+/TransNav/transformer_3d/save/*
+!/TransNav/transformer_3d/save/0/
+/TransNav/transformer_3d/runs/
+events.out.tfevents.*
+
+# Editor settings and temporary files
+.vscode/

@@ -1,0 +1,22 @@
+# Project dependencies pinned to the local diff environment (Python 3.11.13).
+# Use the CUDA 11.8 PyTorch wheel to match that environment.
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.2.2+cu118
+numpy==1.26.4
+scipy==1.16.2
+scikit-learn==1.7.1
+tensorboard==2.19.0
+
+# Visualization and optional model profiling.
+matplotlib==3.10.3
+thop==0.1.1.post2209072238
+
+# CUDA extension build tools.
+setuptools==78.1.1
+ninja==1.11.1.4
+wheel==0.45.1
+
+# Python helpers for ROS integration; install ROS 1 separately.
+rospkg==1.6.0
+catkin-pkg==1.0.0
+PyYAML==6.0.2
