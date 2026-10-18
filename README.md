@@ -2,13 +2,12 @@
 
 Paper: [TransNav: Transformer-Based End-to-End  Navigation Method for Static and Dynamic  Quadrotor Obstacle Avoidance](https://ieeexplore.ieee.org/abstract/document/11692891)
 
-Video of the paper:
+Video of the paper: [bilibili](https://www.bilibili.com/video/BV15ung6zEaW/?vd_source=6691d72d4084f7317b258685abf5617b)
 
 ## Installation
 
 The project was tested on Ubuntu 20.04 with the following hardware:
 
-| Component | Model |
 | --- | --- |
 | CPU | Intel Core i9-12900K |
 | GPU | NVIDIA GeForce RTX 4060 |
@@ -31,16 +30,17 @@ pip install -r requirements.txt
 ### 3. Build the CUDA sensor extension
 
 ```bash
-cd simulator/src
-pip install -e
-cd ../..
+cd simulator
+python -m pip install --no-build-isolation -e src
+cd ..
 ```
 
 ### 4. Build the ROS controller workspace
 
 ```bash
 cd Controller
-catkin_make
+source /opt/ros/noetic/setup.bash
+catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
 source devel/setup.bash
 cd ..
 ```

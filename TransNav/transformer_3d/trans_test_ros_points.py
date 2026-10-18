@@ -1190,7 +1190,7 @@ class EnvPlanner:
 def main():
     """Start the ROS evaluation node."""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model_path = os.path.join(SCRIPT_DIR, "saved", "0", "checkpoint_epoch_50.pth")
+    model_path = os.path.join(SCRIPT_DIR, "save", "0", "checkpoint_epoch_50.pth")
     settings = {"goal": [15.0, 0, 2], "ctrl_topic": "/so3_control/pos_cmd"}
     planner = EnvPlanner(settings, model_path, device=device)
     planner.run()
